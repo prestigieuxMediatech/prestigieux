@@ -1,0 +1,24 @@
+.privacy-page__content h2 {
+  font-size: var(--text-xl);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-4);
+}
+
+.privacy-page__content h2:first-of-type {
+  margin-top: var(--space-6);
+}
+
+.privacy-page__content p {
+  margin-bottom: var(--space-4);
+}
+
+.privacy-page__content a {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.privacy-page__updated {
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-8);
+}

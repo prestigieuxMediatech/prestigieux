@@ -1,0 +1,32 @@
+.section-heading {
+  max-width: 640px;
+  margin-bottom: var(--space-12);
+}
+
+.section-heading--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-heading .eyebrow {
+  display: block;
+  margin-bottom: var(--space-4);
+}
+
+.section-heading h2 {
+  margin-bottom: var(--space-5);
+}
+
+.section-heading__desc {
+  font-size: var(--text-lg);
+  line-height: 1.65;
+  color: var(--color-gray-600);
+}
+
+.section-heading--light .section-heading__desc {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.section-heading--light h2 {
+  color: var(--color-white);
+}

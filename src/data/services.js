@@ -1,0 +1,125 @@
+export const serviceCategories = [
+  { id: 'growth', label: 'Growth & Acquisition' },
+  { id: 'build', label: 'Product & Experience' },
+  { id: 'brand', label: 'Brand & Content' },
+  { id: 'ops', label: 'Operations' },
+];
+
+export const services = [
+  {
+    id: 'web',
+    category: 'build',
+    badge: 'Most Popular',
+    title: 'Website Development',
+    summary: 'Fast, SEO-optimised websites that convert visitors into paying customers.',
+    description: 'Built for speed, search visibility, and conversion — delivered in days, not months.',
+    highlights: ['7–14 day delivery', 'SEO-ready architecture', 'Conversion-focused UX'],
+    icon: 'globe',
+  },
+  {
+    id: 'mobile',
+    category: 'build',
+    badge: 'Fast Delivery',
+    title: 'Mobile App Development',
+    summary: 'Custom Android & iOS apps that drive engagement and repeat business.',
+    description: 'Native-quality experiences engineered for retention and competitive advantage.',
+    highlights: ['Android & iOS', 'Engagement-first flows', 'Scalable backends'],
+    icon: 'mobile',
+  },
+  {
+    id: 'performance',
+    category: 'growth',
+    badge: '#1 In Demand',
+    title: 'Performance Marketing',
+    summary: 'Full-funnel paid advertising across Meta, LinkedIn & YouTube.',
+    description: 'Every rupee tracked. Every conversion optimised. ROAS-first campaign architecture.',
+    highlights: ['Meta · LinkedIn · YouTube', 'Full-funnel tracking', 'ROAS optimisation'],
+    icon: 'chart',
+  },
+  {
+    id: 'leads',
+    category: 'growth',
+    badge: 'Revenue Driver',
+    title: 'Lead Generation',
+    summary: 'Qualified, intent-rich prospects delivered to your CRM daily.',
+    description: 'Multi-channel funnels for B2B, B2C, real estate, edtech, and high-ticket verticals.',
+    highlights: ['CRM-ready leads', 'Multi-channel funnels', 'B2B & B2C expertise'],
+    icon: 'target',
+  },
+  {
+    id: 'content',
+    category: 'brand',
+    badge: 'Viral Potential',
+    title: 'Content Creation',
+    summary: 'Scroll-stopping reels, carousels, blogs, and ad creatives.',
+    description: 'Authority-building content systems that fuel organic reach and paid performance.',
+    highlights: ['Reels & carousels', 'Ad creatives', 'Editorial blogs'],
+    icon: 'film',
+  },
+  {
+    id: 'seo',
+    category: 'growth',
+    badge: 'Long-Term ROI',
+    title: 'SEO & Digital Marketing',
+    summary: 'Strategic SEO and social campaigns for sustainable organic growth.',
+    description: 'Technical foundations, content clusters, and distribution that compounds over time.',
+    highlights: ['Technical SEO', 'Content clusters', 'Organic growth systems'],
+    icon: 'search',
+  },
+  {
+    id: 'brand',
+    category: 'brand',
+    badge: 'Premium Design',
+    title: 'Brand Identity',
+    summary: 'Logo, typography, and brand systems for premium positioning.',
+    description: 'Visual narratives that command trust from the first impression.',
+    highlights: ['Logo & typography', 'Brand guidelines', 'Premium positioning'],
+    icon: 'diamond',
+  },
+  {
+    id: 'ux',
+    category: 'build',
+    badge: 'Award Quality',
+    title: 'UI/UX Design',
+    summary: 'Figma prototypes and interfaces that increase conversions.',
+    description: 'Research-led design systems aligned with business goals and user psychology.',
+    highlights: ['Figma prototypes', 'Design systems', 'Conversion UX'],
+    icon: 'layout',
+  },
+  {
+    id: 'va',
+    category: 'ops',
+    badge: 'Cost-Effective',
+    title: 'Virtual Assistant',
+    summary: 'Trained VAs for admin, support, research, and social management.',
+    description: 'Operational leverage without the overhead — scale your team intelligently.',
+    highlights: ['Admin & support', 'Research & ops', 'Social management'],
+    icon: 'users',
+  },
+];
+
+export const serviceProcess = [
+  { step: '01', title: 'Discovery', text: 'Goals, audience, and competitive landscape mapped in a focused strategy call.' },
+  { step: '02', title: 'Architecture', text: 'Channel mix, creative direction, and delivery timeline aligned to your budget.' },
+  { step: '03', title: 'Execution', text: 'Rapid build and launch with transparent reporting from day one.' },
+  { step: '04', title: 'Optimisation', text: 'Continuous testing and refinement toward ROAS, leads, and revenue targets.' },
+];
+
+export const whyChooseUs = [
+  {
+    title: 'ROI-First Mindset',
+    description: 'Every campaign, creative, and build is measured against revenue outcomes — not vanity metrics.',
+  },
+  {
+    title: 'Full-Stack Growth',
+    description: 'Branding, content, ads, web, and apps under one refined partner — no fragmented vendors.',
+  },
+  {
+    title: 'Speed Without Compromise',
+    description: 'Websites in days. Leads in 48 hours. Iteration cycles that keep you ahead of competitors.',
+  },
+  {
+    title: 'Transparent Partnership',
+    description: 'Clear reporting, honest communication, and retainers built around your growth stage.',
+  },
+];

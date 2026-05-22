@@ -1,0 +1,73 @@
+:root {
+  /* Logo-derived palette */
+  --color-cyan: #00b8e8;
+  --color-cyan-light: #4dd4f5;
+  --color-cyan-dark: #0096c7;
+  --color-navy: #0c1f3d;
+  --color-navy-deep: #061428;
+  --color-navy-muted: #152a4a;
+
+  --color-black: #050608;
+  --color-charcoal: #12151c;
+  --color-slate: #2a3142;
+  --color-gray-600: #5c6478;
+  --color-gray-400: #8b93a8;
+  --color-gray-200: #d4d8e3;
+  --color-ivory: #f6f4f0;
+  --color-white: #ffffff;
+
+  --color-primary: var(--color-cyan);
+  --color-secondary: var(--color-navy);
+  --color-accent: var(--color-cyan-light);
+
+  --font-display: 'Syne', system-ui, sans-serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.75rem;
+  --text-5xl: 3.5rem;
+  --text-6xl: clamp(2.75rem, 5vw, 4.5rem);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  --container-max: 1320px;
+  --container-narrow: 960px;
+  --container-padding: clamp(1.25rem, 4vw, 2.5rem);
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-sm: 0 2px 8px rgba(6, 20, 40, 0.06);
+  --shadow-md: 0 8px 32px rgba(6, 20, 40, 0.1);
+  --shadow-lg: 0 24px 64px rgba(6, 20, 40, 0.16);
+  --shadow-glow: 0 0 40px rgba(0, 184, 232, 0.25);
+
+  --transition-fast: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 320ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 520ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  --header-height: 96px;
+  --z-header: 1000;
+  --z-mobile-menu: 1200;
+  --z-overlay: 1050;
+}
