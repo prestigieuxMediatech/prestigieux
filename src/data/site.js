@@ -38,7 +38,7 @@ export const socialLinks = [
   { label: 'LinkedIn', href: 'https://linkedin.com', icon: 'linkedin' },
   { label: 'Instagram', href: 'https://instagram.com', icon: 'instagram' },
   { label: 'YouTube', href: 'https://youtube.com', icon: 'youtube' },
-  { label: 'WhatsApp', href: `https://wa.me/${company.whatsapp}`, icon: 'whatsapp' },
+  { label: 'Facebook', href: 'https://facebook.com', icon: 'facebook' },
 ];
 
 export const images = {

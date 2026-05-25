@@ -7,13 +7,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-12);
+  gap: var(--space-8);
   flex-wrap: wrap;
-  padding-block: var(--space-16);
+  padding-block: clamp(var(--space-10), 5vw, var(--space-16));
   border: 1px solid rgba(0, 184, 232, 0.2);
   border-radius: var(--radius-xl);
-  padding-inline: var(--space-12);
+  padding-inline: clamp(var(--space-6), 5vw, var(--space-12));
   background: rgba(255, 255, 255, 0.03);
+}
+
+.contact-cta__copy {
+  max-width: 560px;
 }
 
 .contact-cta__copy .eyebrow {
@@ -30,12 +34,15 @@
 
 .contact-cta p {
   color: rgba(255, 255, 255, 0.65);
-  max-width: 400px;
+  max-width: 520px;
+  line-height: 1.65;
 }
 
 .contact-cta__actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-end;
   gap: var(--space-4);
 }
 
@@ -51,18 +58,22 @@
 
 @media (max-width: 768px) {
   .contact-cta__inner {
+    gap: var(--space-6);
     flex-direction: column;
     align-items: flex-start;
-    padding: var(--space-10);
+    padding: clamp(var(--space-6), 6vw, var(--space-10));
   }
 
   .contact-cta__actions {
     width: 100%;
+    max-width: 420px;
+    flex-direction: column;
+    gap: var(--space-3);
   }
 
   .contact-cta__actions .btn {
-    flex: 1;
-    min-width: 140px;
+    width: 100%;
+    min-width: 0;
     justify-content: center;
   }
 }

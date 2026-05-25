@@ -133,7 +133,6 @@
   font-weight: 600;
   border-radius: 10px;
   letter-spacing: 0.02em;
-  /* box-shadow: 0 2px 12px rgba(0, 184, 232, 0.28); */
 }
 
 .header__cta.btn:hover {

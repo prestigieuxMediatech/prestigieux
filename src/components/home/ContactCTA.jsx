@@ -19,6 +19,7 @@ export default function ContactCTA() {
             href={`https://wa.me/${company.whatsapp}`}
             variant="outline-dark"
             size="lg"
+            style={{color:'black'}}
           >
             WhatsApp Us
           </Button>

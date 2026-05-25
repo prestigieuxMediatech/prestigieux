@@ -107,4 +107,9 @@
   .services-preview__grid {
     grid-template-columns: 1fr;
   }
+
+  .services-preview__cta .btn {
+    width: 100%;
+    max-width: 320px;
+  }
 }

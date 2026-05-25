@@ -232,16 +232,19 @@
 }
 
 .services-cta__card {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
   gap: var(--space-10);
-  flex-wrap: wrap;
   padding: var(--space-12);
   background: var(--color-white);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-md);
   border: 1px solid rgba(12, 31, 61, 0.06);
+}
+
+.services-cta__card > div:first-child {
+  max-width: 560px;
 }
 
 .services-cta__card .eyebrow {
@@ -255,13 +258,16 @@
 }
 
 .services-cta__card p {
-  max-width: 420px;
+  max-width: 520px;
+  line-height: 1.65;
 }
 
 .services-cta__actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-4);
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-3);
+  min-width: 280px;
 }
 
 @media (max-width: 1024px) {
@@ -275,6 +281,17 @@
 
   .services-process__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-cta__card {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .services-cta__actions {
+    width: 100%;
+    max-width: 420px;
+    min-width: 0;
   }
 }
 
@@ -296,18 +313,19 @@
   }
 
   .services-cta__card {
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
     padding: var(--space-8);
   }
 
   .services-cta__actions {
     width: 100%;
+    min-width: 0;
   }
 
   .services-cta__actions .btn {
-    flex: 1;
+    width: 100%;
     justify-content: center;
-    min-width: 140px;
+    min-width: 0;
   }
 }

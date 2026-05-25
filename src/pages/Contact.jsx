@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import PageHero from '../components/ui/PageHero';
 import Button from '../components/ui/Button';
 import { pageMeta } from '../data/pages';
 import { company } from '../data/site';
 import { usePageMeta } from '../hooks/usePageMeta';
+import { sendEmailJS } from '../lib/emailjs';
 import './Contact.css';
 
 const serviceOptions = [
@@ -21,6 +23,41 @@ const serviceOptions = [
 export default function Contact() {
   const meta = pageMeta.contact;
   usePageMeta(meta);
+  const [isSending, setIsSending] = useState(false);
+  const [submitState, setSubmitState] = useState({ type: '', message: '' });
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      from_name: formData.get('name')?.toString().trim() ?? '',
+      reply_to: formData.get('email')?.toString().trim() ?? '',
+      phone: formData.get('phone')?.toString().trim() ?? '',
+      service: formData.get('service')?.toString().trim() ?? 'Not selected',
+      message: formData.get('message')?.toString().trim() ?? '',
+      source: 'Website Contact Form',
+    };
+
+    setIsSending(true);
+    setSubmitState({ type: '', message: '' });
+
+    try {
+      await sendEmailJS('contact', payload);
+      setSubmitState({ type: 'success', message: 'Message sent successfully. We will connect with you shortly.' });
+      form.reset();
+    } catch (error) {
+      setSubmitState({
+        type: 'error',
+        message: 'Message could not be sent right now. Please check EmailJS configuration and try again.',
+      });
+      // eslint-disable-next-line no-console
+      console.error(error);
+    } finally {
+      setIsSending(false);
+    }
+  }
 
   return (
     <>
@@ -36,8 +73,8 @@ export default function Contact() {
           <div className="contact-page__info">
             <h2>We would love to hear from you</h2>
             <p className="contact-page__intro">
-              Share your goals and our team will respond with a thoughtful next step — usually
-              within 2 hours during business hours.
+              Share your goals and our team will respond with a thoughtful next step, usually within 2 hours
+              during business hours.
             </p>
 
             <div className="contact-page__block">
@@ -60,7 +97,7 @@ export default function Contact() {
             </div>
             <div className="contact-page__block">
               <span className="eyebrow">Business Hours</span>
-              <p>8:00 AM – 10:00 PM</p>
+              <p>8:00 AM - 10:00 PM</p>
               <p>Monday to Sunday</p>
             </div>
 
@@ -74,7 +111,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+          <form className="contact-form" onSubmit={handleSubmit}>
             <h3 className="contact-form__title">Send us a message</h3>
             <div className="contact-form__row">
               <label>
@@ -112,9 +149,14 @@ export default function Contact() {
                 placeholder="Tell us about your business and goals..."
               />
             </label>
-            <Button type="submit" variant="primary" size="lg">
-              Send Message →
+            <Button type="submit" variant="primary" size="lg" disabled={isSending}>
+              {isSending ? 'Sending...' : 'Send Message ->'}
             </Button>
+            {submitState.message && (
+              <p className={`contact-form__status contact-form__status--${submitState.type}`}>
+                {submitState.message}
+              </p>
+            )}
           </form>
         </div>
       </section>
