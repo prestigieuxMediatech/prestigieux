@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import PageHero from '../components/ui/PageHero';
 import SectionHeading from '../components/ui/SectionHeading';
 import { projects } from '../data/projects';
@@ -8,7 +9,12 @@ import './Portfolio.css';
 
 export default function Portfolio() {
   const meta = pageMeta.portfolio;
+  const [failedImages, setFailedImages] = useState({});
   usePageMeta(meta);
+
+  const handleImageError = (projectId) => {
+    setFailedImages((prev) => ({ ...prev, [projectId]: true }));
+  };
 
   return (
     <>
@@ -22,7 +28,7 @@ export default function Portfolio() {
       <section className="portfolio-intro section section--ivory">
         <div className="container portfolio-intro__inner">
           <p>
-            Every engagement starts with clarity — then we execute across ads, web, content, and
+            Every engagement starts with clarity - then we execute across ads, web, content, and
             brand until the numbers move. Here is a sample of outcomes our partners have achieved.
           </p>
         </div>
@@ -33,12 +39,35 @@ export default function Portfolio() {
           {projects.map((project) => (
             <article key={project.id} className="portfolio-item">
               <div className="portfolio-item__image">
-                <img src={project.image} alt={project.title} loading="lazy" />
+                {failedImages[project.id] ? (
+                  <div className="portfolio-item__image-fallback" role="img" aria-label={project.title}>
+                    <span>{project.title}</span>
+                  </div>
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    loading="lazy"
+                    onError={() => handleImageError(project.id)}
+                  />
+                )}
               </div>
               <div className="portfolio-item__content">
-                <span>{project.category}</span>
+                <span>{project.service || project.category}</span>
                 <h2>{project.title}</h2>
                 <p>{project.result}</p>
+                {project.technologies?.length ? (
+                  <div className="portfolio-item__stack">
+                    <p className="portfolio-item__stack-label">Technologies Used</p>
+                    <div className="portfolio-item__chips">
+                      {project.technologies.map((tech) => (
+                        <span key={tech} className="portfolio-item__chip">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
               </div>
             </article>
           ))}

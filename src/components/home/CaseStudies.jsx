@@ -23,7 +23,7 @@ export default function CaseStudies() {
         </div>
 
         <div ref={ref} className="case-studies__grid reveal">
-          {projects.map((project, index) => (
+          {projects.slice(0, 4).map((project, index) => (
             <Link
               key={project.id}
               to="/portfolio"

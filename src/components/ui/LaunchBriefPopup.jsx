@@ -78,8 +78,11 @@ export default function LaunchBriefPopup() {
     const payload = {
       from_name: fullName.trim(),
       reply_to: isEmailValid ? cleanedEmail : 'no-reply@example.com',
+      
       email_display: cleanedEmail || 'Not provided',
       phone: phone.trim() || 'Not provided',
+      service: 'Popup Enquiry',
+      message: `Contact mode: ${contactMode}\nFocus areas: ${selectedFocus.join(', ')}\nTimeline: ${deliveryWeeks} weeks (${paceLabel})\nBrand mood: ${brandMoods.find((item) => item.id === mood)?.label || mood}`,
       contact_mode: contactMode,
       focus_areas: selectedFocus.join(', '),
       delivery_timeline: `${deliveryWeeks} weeks (${paceLabel})`,

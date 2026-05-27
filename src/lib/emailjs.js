@@ -7,6 +7,7 @@ function readEnv(name) {
 
 const config = {
   publicKey: readEnv('VITE_EMAILJS_PUBLIC_KEY'),
+  recipientEmail: readEnv('VITE_EMAILJS_RECIPIENT') || 'info@prestigieux.in',
   contact: {
     serviceId: readEnv('VITE_EMAILJS_SERVICE_ID_CONTACT'),
     templateId: readEnv('VITE_EMAILJS_TEMPLATE_ID_CONTACT'),
@@ -30,11 +31,10 @@ export async function sendEmailJS(channel, templateParams) {
   validateConfig(channel);
   const channelConfig = config[channel];
 
+  // No fallback needed — To Email is hardcoded in the template
   const response = await fetch(EMAILJS_ENDPOINT, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       service_id: channelConfig.serviceId,
       template_id: channelConfig.templateId,

@@ -1,13 +1,28 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
 import { navLinks, company } from '../../data/site';
 import logo from '../../assets/logo.png';
 import Button from '../ui/Button';
 import './Header.css';
 
-function MobileMenu({ open, onClose, links }) {
+function isPathActive(currentPath, path) {
+  if (path === '/') return currentPath === '/';
+  return currentPath === path || currentPath.startsWith(`${path}/`);
+}
+
+function shouldHandleClientNavigation(event) {
+  return (
+    event.button === 0 &&
+    !event.metaKey &&
+    !event.altKey &&
+    !event.ctrlKey &&
+    !event.shiftKey
+  );
+}
+
+function MobileMenu({ open, onClose, onNavigate, links, currentPath }) {
   if (typeof document === 'undefined') return null;
 
   return createPortal(
@@ -28,16 +43,19 @@ function MobileMenu({ open, onClose, links }) {
           <ul>
             {links.map((link) => (
               <li key={link.path}>
-                <NavLink
-                  to={link.path}
-                  className={({ isActive }) =>
-                    `mobile-menu__link ${isActive ? 'mobile-menu__link--active' : ''}`
-                  }
-                  end={link.path === '/'}
-                  onClick={onClose}
+                <a
+                  href={link.path}
+                  className={`mobile-menu__link ${
+                    isPathActive(currentPath, link.path) ? 'mobile-menu__link--active' : ''
+                  }`}
+                  onClick={(event) => {
+                    if (!shouldHandleClientNavigation(event)) return;
+                    event.preventDefault();
+                    onNavigate(link.path);
+                  }}
                 >
                   {link.label}
-                </NavLink>
+                </a>
               </li>
             ))}
           </ul>
@@ -61,8 +79,14 @@ export default function Header({ transparent = false }) {
   const scrolled = useScrollPosition(40);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const isHome = location.pathname === '/';
   const overlayMode = transparent && isHome && !scrolled && !menuOpen;
+
+  const handleNavigate = (path) => {
+    navigate(path);
+    setMenuOpen(false);
+  };
 
   useEffect(() => {
     setMenuOpen(false);
@@ -88,11 +112,15 @@ export default function Header({ transparent = false }) {
     <>
       <header className={headerClass}>
         <div className="header__inner container">
-          <Link
-            to="/"
+          <a
+            href="/"
             className="header__logo"
             aria-label={`${company.name} home`}
-            onClick={() => menuOpen && setMenuOpen(false)}
+            onClick={(event) => {
+              if (!shouldHandleClientNavigation(event)) return;
+              event.preventDefault();
+              handleNavigate('/');
+            }}
           >
             <img
               src={logo}
@@ -101,21 +129,25 @@ export default function Header({ transparent = false }) {
               width={220}
               height={64}
             />
-          </Link>
+          </a>
 
           <nav className="header__nav" aria-label="Main navigation">
             <ul className="header__links">
               {navLinks.map((link) => (
                 <li key={link.path}>
-                  <NavLink
-                    to={link.path}
-                    className={({ isActive }) =>
-                      `header__link ${isActive ? 'header__link--active' : ''}`
-                    }
-                    end={link.path === '/'}
+                  <a
+                    href={link.path}
+                    className={`header__link ${
+                      isPathActive(location.pathname, link.path) ? 'header__link--active' : ''
+                    }`}
+                    onClick={(event) => {
+                      if (!shouldHandleClientNavigation(event)) return;
+                      event.preventDefault();
+                      handleNavigate(link.path);
+                    }}
                   >
                     {link.label}
-                  </NavLink>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -157,7 +189,13 @@ export default function Header({ transparent = false }) {
         </div>
       </header>
 
-      <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} links={navLinks} />
+      <MobileMenu
+        open={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        onNavigate={handleNavigate}
+        links={navLinks}
+        currentPath={location.pathname}
+      />
     </>
   );
 }

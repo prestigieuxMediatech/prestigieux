@@ -31,6 +31,15 @@ export default function Footer() {
               </a>
             ))}
           </div>
+          <div className="footer__map" aria-label="Prestigieux Mediatech location map">
+            <iframe
+              title="Prestigieux Mediatech Private Limited location"
+              src="https://www.google.com/maps?q=Prestigieux+Mediatech+Private+Limited&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
         </div>
 
         <div className="footer__col">
@@ -68,19 +77,6 @@ export default function Footer() {
               <a href={`mailto:${company.email}`}>{company.email}</a>
             </p>
           </address>
-
-          <form className="footer__newsletter" onSubmit={(e) => e.preventDefault()}>
-            <label htmlFor="newsletter-email" className="sr-only">
-              Email for newsletter
-            </label>
-            <input
-              id="newsletter-email"
-              type="email"
-              placeholder="Your email"
-              aria-label="Newsletter email"
-            />
-            <button type="submit">Subscribe</button>
-          </form>
         </div>
       </div>
 
