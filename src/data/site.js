@@ -13,6 +13,7 @@ export const navLinks = [
   { label: 'About', path: '/about' },
   { label: 'Services', path: '/services' },
   { label: 'Work', path: '/portfolio' },
+  { label: 'Careers', path: '/careers' },
   { label: 'Blog', path: '/blog' },
 ];
 

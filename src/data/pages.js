@@ -2,73 +2,73 @@ import { images } from './site';
 
 export const pageMeta = {
   home: {
-    title: 'Prestigieux Mediatech | ROI-Driven Digital Marketing Agency',
+    title: 'Digital Marketing Agency That Helps Your Business Grow Online',
     description:
-      'Performance marketing, lead generation, branding, and digital product execution — one refined growth partner in Navi Mumbai & India.',
+      'At Prestigieux, we help businesses grow with strategic Online Marketing Services tailored to their goals. As a trusted Performance Marketing Agency, we specialize in Social Media Marketing, Social Media Management, Search Engine Marketing, and Online Branding Services to build a stronger online presence, generate quality leads, and deliver measurable business growth. ',
     canonical: 'https://prestigieux.in/',
     og: {
-      title: 'Prestigieux Mediatech | ROI-Driven Digital Marketing Agency',
+      title: 'Digital Marketing Agency That Helps Your Business Grow Online',
       description:
-        'Performance marketing, lead generation, branding, and digital product execution — one refined growth partner in Navi Mumbai & India.',
+        'At Prestigieux, we help businesses grow with strategic Online Marketing Services tailored to their goals. As a trusted Performance Marketing Agency, we specialize in Social Media Marketing, Social Media Management, Search Engine Marketing, and Online Branding Services to build a stronger online presence, generate quality leads, and deliver measurable business growth. ',
       image: 'https://prestigieux.in/og-home.png',
       url: 'https://prestigieux.in/',
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Prestigieux Mediatech | ROI-Driven Digital Marketing Agency',
+      title: 'Digital Marketing Agency That Helps Your Business Grow Online',
       description:
-        'Performance marketing, lead generation, branding, and digital product execution — one refined growth partner in Navi Mumbai & India.',
+        'At Prestigieux, we help businesses grow with strategic Online Marketing Services tailored to their goals. As a trusted Performance Marketing Agency, we specialize in Social Media Marketing, Social Media Management, Search Engine Marketing, and Online Branding Services to build a stronger online presence, generate quality leads, and deliver measurable business growth.',
       image: 'https://prestigieux.in/og-home.png',
     },
   },
 
   about: {
-    title: 'About Us | Prestigieux Mediatech',
+    title: 'About Prestigieux – Digital Marketing Experts',
     eyebrow: 'Our Story',
     heading: 'From registration to recognition',
     description:
-      'Prestigieux Mediatech helps brands build a more credible, visible, and conversion-ready digital presence with strategy, design, and execution under one roof.',
+      'At Prestigieux, we are a team of experienced marketing professionals dedicated to helping businesses grow through innovative marketing solutions. Our customer-focused agency combines creativity, strategy, and technology to deliver digital transformation services that strengthen your brand, increase online visibility, and achieve measurable results. ',
     image: images.team,
     canonical: 'https://prestigieux.in/about',
     og: {
-      title: 'About Us | Prestigieux Mediatech',
+      title: 'About Prestigieux – Digital Marketing Experts',
       description:
-        'Prestigieux Mediatech helps brands build a more credible, visible, and conversion-ready digital presence with strategy, design, and execution under one roof.',
+        'At Prestigieux, we are a team of experienced marketing professionals dedicated to helping businesses grow through innovative marketing solutions. Our customer-focused agency combines creativity, strategy, and technology to deliver digital transformation services that strengthen your brand, increase online visibility, and achieve measurable results.',
       image: 'https://prestigieux.in/og-about.png',
       url: 'https://prestigieux.in/about',
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'About Us | Prestigieux Mediatech',
+      title: 'About Prestigieux – Digital Marketing Experts',
       description:
-        'Prestigieux Mediatech helps brands build a more credible, visible, and conversion-ready digital presence with strategy, design, and execution under one roof.',
+        'At Prestigieux, we are a team of experienced marketing professionals dedicated to helping businesses grow through innovative marketing solutions. Our customer-focused agency combines creativity, strategy, and technology to deliver digital transformation services that strengthen your brand, increase online visibility, and achieve measurable results.',
       image: 'https://prestigieux.in/og-about.png',
     },
   },
 
   services: {
-    title: 'Services | Prestigieux Mediatech',
+    title: 'SEO Services That Help Your Business Rank Higher on Google ',
     eyebrow: 'What We Do',
     heading: 'Complete digital growth services',
     description:
-      'From a simple website to a full-stack growth engine — strategy, creative, media, and product execution shaped for measurable outcomes.',
+      'Prestigieux offers professional SEO Services designed to improve online visibility and drive sustainable growth. Our expertise includes Search Engine Optimization, Local SEO Services, Technical SEO Services, On Page SEO, Off Page SEO, SEO Audit Services, Keyword Research Services, and Link Building Services to help your business achieve better search rankings.',
     image: images.strategy,
     canonical: 'https://prestigieux.in/services',
     og: {
-      title: 'Services | Prestigieux Mediatech',
+      title: 'SEO Services That Help Your Business Rank Higher on Google',
       description:
-        'From a simple website to a full-stack growth engine — strategy, creative, media, and product execution shaped for measurable outcomes.',
+        'Prestigieux offers professional SEO Services designed to improve online visibility and drive sustainable growth. Our expertise includes Search Engine Optimization, Local SEO Services, Technical SEO Services, On Page SEO, Off Page SEO, SEO Audit Services, Keyword Research Services, and Link Building Services to help your business achieve better search rankings.',
       image: 'https://prestigieux.in/og-services.png',
       url: 'https://prestigieux.in/services',
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Services | Prestigieux Mediatech',
+      title: 'SEO Services That Help Your Business Rank Higher on Google',
       description:
-        'From a simple website to a full-stack growth engine — strategy, creative, media, and product execution shaped for measurable outcomes.',
+        'Prestigieux offers professional SEO Services designed to improve online visibility and drive sustainable growth. Our expertise includes Search Engine Optimization, Local SEO Services, Technical SEO Services, On Page SEO, Off Page SEO, SEO Audit Services, Keyword Research Services, and Link Building Services to help your business achieve better search rankings.',
       image: 'https://prestigieux.in/og-services.png',
     },
   },
@@ -99,52 +99,77 @@ export const pageMeta = {
   },
 
   portfolio: {
-    title: 'Our Work | Prestigieux Mediatech',
+    title: 'Digital Marketing Portfolio That Showcases Real Results',
     eyebrow: 'Portfolio',
     heading: 'Brands we have helped scale',
     description:
-      'Selected partnerships where performance marketing, product craft, and brand clarity came together to deliver compounding growth.',
+      'Explore the Prestigieux Digital Marketing Portfolio featuring Our Work across SEO Portfolio, Website Design Portfolio, Web Development Portfolio, Branding Portfolio, Creative Portfolio, Client Projects, and Completed Projects that showcase quality, creativity, and measurable business results.',
     image: images.workspace,
     canonical: 'https://prestigieux.in/portfolio',
     og: {
-      title: 'Our Work | Prestigieux Mediatech',
+      title: 'Digital Marketing Portfolio That Showcases Real Results',
       description:
-        'Selected partnerships where performance marketing, product craft, and brand clarity came together to deliver compounding growth.',
+        'Explore the Prestigieux Digital Marketing Portfolio featuring Our Work across SEO Portfolio, Website Design Portfolio, Web Development Portfolio, Branding Portfolio, Creative Portfolio, Client Projects, and Completed Projects that showcase quality, creativity, and measurable business results.',
       image: 'https://prestigieux.in/og-portfolio.png',
       url: 'https://prestigieux.in/portfolio',
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Our Work | Prestigieux Mediatech',
+      title: 'Digital Marketing Portfolio That Showcases Real Results',
       description:
-        'Selected partnerships where performance marketing, product craft, and brand clarity came together to deliver compounding growth.',
+        'Explore the Prestigieux Digital Marketing Portfolio featuring Our Work across SEO Portfolio, Website Design Portfolio, Web Development Portfolio, Branding Portfolio, Creative Portfolio, Client Projects, and Completed Projects that showcase quality, creativity, and measurable business results.',
       image: 'https://prestigieux.in/og-portfolio.png',
     },
   },
 
   blog: {
-    title: 'Blog | Prestigieux Mediatech',
+    title: 'Digital Marketing Blog for Business Growth',
     eyebrow: 'Insights',
     heading: 'Growth intelligence & playbooks',
     description:
-      'Practical strategies on performance marketing, web, SEO, and brand — from the team behind 50+ brand growth stories across India and beyond.',
+      'Explore expert insights through our SEO Blog, Marketing Blog, Business Blog, Technology Blog, Digital Marketing Tips, SEO Tips, SEO Guide, Website Development Blog, and Web Design Tips to help your business grow online.',
     image: images.blog,
     canonical: 'https://prestigieux.in/blog',
     og: {
-      title: 'Blog | Prestigieux Mediatech',
+      title: 'Digital Marketing Blog for Business Growth',
       description:
-        'Practical strategies on performance marketing, web, SEO, and brand — from the team behind 50+ brand growth stories across India and beyond.',
+        'Explore expert insights through our SEO Blog, Marketing Blog, Business Blog, Technology Blog, Digital Marketing Tips, SEO Tips, SEO Guide, Website Development Blog, and Web Design Tips to help your business grow online.',
       image: 'https://prestigieux.in/og-blog.png',
       url: 'https://prestigieux.in/blog',
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Blog | Prestigieux Mediatech',
+      title: 'Digital Marketing Blog for Business Growth',
       description:
-        'Practical strategies on performance marketing, web, SEO, and brand — from the team behind 50+ brand growth stories across India and beyond.',
+        'Explore expert insights through our SEO Blog, Marketing Blog, Business Blog, Technology Blog, Digital Marketing Tips, SEO Tips, SEO Guide, Website Development Blog, and Web Design Tips to help your business grow online.',
       image: 'https://prestigieux.in/og-blog.png',
+    },
+  },
+
+  careers: {
+    title: 'Career Opportunities at Prestigieux for Creative Professionals',
+    eyebrow: 'Join Us',
+    heading: 'Build your growth career with us',
+    description:
+      'Explore Career Opportunities at Prestigieux and discover Job Openings for talented professionals. We are Hiring Now for Digital Marketing Jobs, SEO Jobs, Web Developer Jobs, and WordPress Developer Jobs. Join Our Team and build a rewarding career with us.',
+    image: images.team,
+    canonical: 'https://prestigieux.in/careers',
+    og: {
+      title: 'Career Opportunities at Prestigieux for Creative Professionals',
+      description:
+        'Explore Career Opportunities at Prestigieux and discover Job Openings for talented professionals. We are Hiring Now for Digital Marketing Jobs, SEO Jobs, Web Developer Jobs, and WordPress Developer Jobs. Join Our Team and build a rewarding career with us.',
+      image: 'https://prestigieux.in/og-home.png',
+      url: 'https://prestigieux.in/careers',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Career Opportunities at Prestigieux for Creative Professionals',
+      description:
+        'Explore Career Opportunities at Prestigieux and discover Job Openings for talented professionals. We are Hiring Now for Digital Marketing Jobs, SEO Jobs, Web Developer Jobs, and WordPress Developer Jobs. Join Our Team and build a rewarding career with us.',
+      image: 'https://prestigieux.in/og-home.png',
     },
   },
 

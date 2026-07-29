@@ -60,3 +60,18 @@
   font-size: var(--text-sm);
   max-width: 520px;
 }
+
+.careers-note {
+  margin-top: var(--space-8);
+  font-size: var(--text-base);
+  color: var(--color-slate);
+}
+
+.careers-note a {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.careers-note a:hover {
+  color: var(--color-cyan-dark);
+}

@@ -2,6 +2,8 @@ import sevenEvenImage from '../assets/SevenEven.png';
 import gurukulImage from '../assets/ge.png';
 import learningHubImage from '../assets/tlh.png';
 import marfiImage from '../assets/marfi.png';
+import hkay from '../assets/hkay.png'
+import ishkayirshad from '../assets/ii.png'
 
 export const projects = [
   {
@@ -56,7 +58,7 @@ export const projects = [
     title: 'Gurukul Eduworld',
     category: 'Web Development',
     service: 'Web Development',
-    technologies: ['Next.js', 'React', 'Responsive UI'],
+    technologies: ['Next.js', 'Responsive UI'],
     image: gurukulImage,
     imageFit: 'contain',
     result:
@@ -67,7 +69,7 @@ export const projects = [
     title: 'The Learning Hub International',
     category: 'Web Development',
     service: 'Web Development',
-    technologies: ['Next.js', 'React', 'Content Architecture'],
+    technologies: ['Next.js', 'Content Architecture'],
     image: learningHubImage,
     imageFit: 'contain',
     result:
@@ -113,5 +115,27 @@ export const projects = [
     image: 'https://images.unsplash.com/photo-1521412644187-c49fa049e84d?w=1200&q=80',
     result:
       'Strengthened brand recall with consistent social storytelling and digital campaigns that increased engagement quality and inbound training inquiries.',
+  },
+  {
+    id: 12,
+    title: 'Hkay Leather Goods',
+    category: 'Web Development',
+    service: 'Web Development',
+    technologies: ['Next.js', 'Tailwind CSS','Supabase', 'Clerk', 'Razorpay','ShipRocket'],
+    image: hkay,
+    imageFit: 'contain',
+    result:
+      'HKAY Leather Goods – A full-stack e-commerce platform for premium leather goods with secure payments, real-time order tracking, and a seamless shopping experience, built on Next.js and Supabase.',
+  },
+  {
+    id: 13,
+    title: 'ISHKAYIRSHAD Affiliate Marketing',
+    category: 'Web Development | Digital Marketing',
+    service: 'Web Development & Digital Marketing',
+    technologies: ['Wordpress','Performance Ads','Analytics'],
+    image: ishkayirshad,
+    imageFit: 'contain',
+    result:
+      'An affiliate marketing website showcasing curated product recommendations, driven by targeted digital marketing campaigns to boost traffic and conversions.',
   },
 ];

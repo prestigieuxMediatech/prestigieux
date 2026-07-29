@@ -29,30 +29,43 @@ export default function FloatingSupport() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedQuestion, setSelectedQuestion] = useState(0);
   const whatsappHref = useMemo(() => `https://wa.me/${company.whatsapp}`, []);
+  const activeFaq = faqs[selectedQuestion];
 
   return (
     <div className="floating-support" aria-label="Quick support">
       {isOpen ? (
         <div className="floating-support__panel" role="dialog" aria-label="FAQ assistant">
           <p className="floating-support__title">Quick questions</p>
-          <p className="floating-support__subtitle">Pick a question to see the answer instantly.</p>
+          <p className="floating-support__subtitle">Tap a question to view the answer right there.</p>
+          <div className="floating-support__featured-answer">
+            <p className="floating-support__answer-label">Selected Answer</p>
+            <h4>{activeFaq?.question}</h4>
+            <p>{activeFaq?.answer}</p>
+          </div>
           <div className="floating-support__questions">
             {faqs.map((item, index) => (
-              <button
-                type="button"
+              <div
                 key={item.question}
-                className={`floating-support__question ${
-                  selectedQuestion === index ? 'floating-support__question--active' : ''
+                className={`floating-support__item ${
+                  selectedQuestion === index ? 'floating-support__item--active' : ''
                 }`}
-                onClick={() => setSelectedQuestion(index)}
               >
-                {item.question}
-              </button>
+                <button
+                  type="button"
+                  className={`floating-support__question ${
+                    selectedQuestion === index ? 'floating-support__question--active' : ''
+                  }`}
+                  onClick={() => setSelectedQuestion(index)}
+                  aria-expanded={selectedQuestion === index}
+                >
+                  <span>{item.question}</span>
+                  <span className="floating-support__chevron" aria-hidden="true" />
+                </button>
+                <div className="floating-support__inline-answer">
+                  <p>{item.answer}</p>
+                </div>
+              </div>
             ))}
-          </div>
-          <div className="floating-support__answer">
-            <p className="floating-support__answer-label">Answer</p>
-            <p>{faqs[selectedQuestion]?.answer}</p>
           </div>
           <a href={whatsappHref} target="_blank" rel="noreferrer" className="floating-support__link">
             Need help right now? Chat on WhatsApp

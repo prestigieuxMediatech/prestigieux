@@ -1,6 +1,5 @@
 import PageHero from '../components/ui/PageHero';
 import SectionHeading from '../components/ui/SectionHeading';
-import Button from '../components/ui/Button';
 import { pageMeta } from '../data/pages';
 import { company, images } from '../data/site';
 import { coreValues } from '../data/about';
@@ -9,22 +8,16 @@ import './Careers.css';
 
 const openings = [
   {
-    title: 'Performance Marketing Specialist',
-    type: 'Full-time · Navi Mumbai',
+    title: 'Digital Marketing Intern',
+    type: 'Internship | Work from Office | Navi Mumbai',
     description:
-      'Meta, LinkedIn, and YouTube campaign management with ROAS accountability and clear client reporting.',
+      'Support paid campaigns, keyword research, basic reporting, and day-to-day marketing execution across platforms.',
   },
   {
-    title: 'Senior UI/UX Designer',
-    type: 'Full-time · Remote / Hybrid',
+    title: 'Social Media Intern',
+    type: 'Internship | Work from Office | Navi Mumbai',
     description:
-      'Figma-led product design for web and mobile — research, prototypes, and design systems that convert.',
-  },
-  {
-    title: 'Content Strategist',
-    type: 'Full-time · Navi Mumbai',
-    description:
-      'Reels, carousels, and editorial content systems for growth brands — creative that performs.',
+      'Assist with content planning, posting schedules, community engagement, and social media trend research.',
   },
 ];
 
@@ -56,8 +49,8 @@ export default function Careers() {
         <div className="container">
           <SectionHeading
             eyebrow="Open Roles"
-            title="Current opportunities"
-            description={`We are always meeting exceptional talent. Send your portfolio and CV to ${company.email}.`}
+            title="Current internships"
+            description="We are hiring interns who want to build strong real-world marketing experience."
           />
 
           <div className="careers-list">
@@ -68,15 +61,15 @@ export default function Careers() {
                   <span className="career-card__type">{role.type}</span>
                   <p>{role.description}</p>
                 </div>
-                <Button
-                  href={`mailto:${company.email}?subject=Application: ${encodeURIComponent(role.title)}`}
-                  variant="outline-dark"
-                >
-                  Apply
-                </Button>
               </article>
             ))}
           </div>
+
+          <p className="careers-note">
+            To apply, please email your resume along with a brief introduction, your current
+            location, and your area of interest to{' '}
+            <a href={`mailto:${company.email}`}>{company.email}</a>.
+          </p>
         </div>
       </section>
     </>

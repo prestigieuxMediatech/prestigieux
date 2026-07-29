@@ -28,11 +28,10 @@ export default function AboutPreview() {
           <SectionHeading
             eyebrow="Who We Are"
             title="A focused growth partner for ambitious businesses"
-            description="Based in Navi Mumbai, we bring together marketing, branding, product thinking, and development so businesses can scale with one aligned team."
+            description="Based in Navi Mumbai, Prestigieux is a Digital Marketing Company that helps businesses grow with strategic marketing, creative branding, and modern digital solutions."
           />
           <p className="about-preview__text">
-            Our approach stays subtle, strategic, and outcome-driven — strong messaging,
-            polished execution, and systems that help brands look premium while performing better.
+             As an experienced Internet Marketing Company and Digital Growth Agency, we focus on building strong online visibility, attracting the right audience, and delivering measurable business growth through thoughtful, result-driven strategies.
           </p>
           <Button href="/about" variant="outline-dark">
             Our Story
